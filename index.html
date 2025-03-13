@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Joseph Imafidon</span></h1>
+            <p>Web Designer & Developer</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate web designer with a keen eye for detail and a love for creating beautiful, functional websites. With years of experience in the industry, I specialize in creating user-centered designs that make an impact.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>Responsive Design</li>
+                        <li>Web Development</li>
+                        <li>Adobe XD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/255/4592/3064" alt="Project 1">
+                    
+                </div>
+                <h3>Orphanage Website</h3>
+                <p>Website for an orphanage in Benin city Edo state</p>
+                <a href="https://wgworphanage.vercel.app/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/338/2000/1333" alt="Project 2">
+                    
+                </div>
+                <h3>Elderly Home Website</h3>
+                <p>Website for a home for the elderly in smyrna</p>
+                <a href="https://home4theelderly.netlify.app/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/42/3456/2304" alt="Project 3">
+                    
+                </div>
+                <h3>Restaurant Website</h3>
+                <p>UI Design, Development</p>
+                <a href="https://imafidon-portfolio.netlify.app/" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/CodeTheGlobe" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/imafidonjoseph" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <!--<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>-->
+               <!-- <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.hamburger').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
